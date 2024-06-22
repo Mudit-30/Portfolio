@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudit-Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:ital,wght@0,200;0,400;0,600;1,100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            background-color: #000021;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: #12123E;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: antiquewhite;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:active {
+            color: #4486E8;
+            font-size: 1.01em;
+        }
+
+        .first-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 100px 0;
+            padding: 0 20px;
+        }
+
+        .intro {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: blueviolet;
+            font-weight: bold;
+        }
+
+        .passionate {
+            font-style: italic;
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .first-section .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 7px;
+            padding: 12px 24px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #1e2167;
+        }
+
+        main hr {
+            border: none;
+            background-color: #9c79f1;
+            height: 1px;
+            margin: 40px 0;
+        }
+
+        .section-container {
+            max-width: 80vw;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .box {
+            background: white;
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .vertical {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .vertical img {
+            width: 50px;
+            margin-right: 20px;
+        }
+
+        .vertical-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .vertical-desc {
+            color: grey;
+            font-size: 0.9rem;
+        }
+
+        .skills-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .skills-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .skills-level {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: #12123E;
+            color: gray;
+            padding: 40px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin: 5px 0;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .footer-rights {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .first-section {
+                margin: 50px 0;
+            }
+
+            .vertical img {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            .first-section h1 {
+                font-size: 2rem;
+            }
+
+            .skills-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-title,
+            .skills-level {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Mudit's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first-section">
+            <div class="intro">
+                Hi, my name is <span class="highlight">Mudit</span> and I am a <span class="passionate">passionate web developer</span>
+            </div>
+            <div class="buttons">
+                <a href="https://www.linkedin.com/in/mudit-saxena-4039b026b/" class="btn">LinkedIn</a>
+                <a href="https://github.com/Mudit-30" class="btn">Visit Github</a>
+            </div>
+        </section>
+        <hr>
+        <section class="section-container second-section">
+            <h1>Work Done So Far</h1>
+            <div class="box">
+                <!-- SQL Experience -->
+                <div class="vertical">
+                    <img src="sql.jpg" alt="SQL Icon">
+                    <div>
+                        <div class="vertical-title">SQL 2020-2021</div>
+                        <div class="vertical-desc"></div>
+                    </div>
+                </div>
+                <!-- Data Visualization Experience -->
+                <div class="vertical">
+                    <img src="roun6.png" alt="Python Icon">
+                    <div>
+                        <div class="vertical-title">Data Visualization in Python and Matplotlib Libraries 2022-2023</div>
+                        <div class="vertical-desc">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="education" class="section-container education-section">
+            <h1>Education</h1>
+            <div class="box">
+                <!-- Bachelor's Education -->
+                <div class="education-item">
+                    <div class="education-title">B.E. in CSE-(AIML)</div>
+                    <div class="education-subtitle">MSRIT Bangalore, 2023 - 2027</div>
+                </div>
+            </div>
+            <div class="box">
+                <!-- Secondary Education -->
+                <div class="education-item">
+                    <div class="education-title">Senior Secondary</div>
+                    <div class="education-subtitle">DPS Bhopal, CBSE Board</div>
+                    <div class="education-details">Score: 93%</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id
+
+="skills" class="section-container skills-section">
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="skills-item">
+                    <div class="skills-title">HTML, CSS</div>
+                    <div class="skills-level">Beginner</div>
+                </div>
+                <div class="skills-item">
+                    <div class="skills-title">MATLAB</div>
+                    <div class="skills-level">Intermediate</div>
+                </div>
+                <div class="skills-item">
+                    <div class="skills-title">Python and Python Libraries</div>
+                    <div class="skills-level">Intermediate</div>
+                </div>
+                <div class="skills-item">
+                    <div class="skills-title">Java</div>
+                    <div class="skills-level">Intermediate</div>
+                </div>
+                <div class="skills-item">
+                    <div class="skills-title">Data Structures and Algorithms</div>
+                    <div class="skills-level">Intermediate</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact" class="section-container contact-section">
+            <h1>Contact</h1>
+            <div class="box">
+                <div class="contact-details">Phone Number: 9644963709</div>
+                <div class="contact-details">Email: muditsaxena33@gmail.com</div>
+            </div>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <div class="footer">
+            <div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Education</a></li>
+                    <li><a href="/">Certificates</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Training</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/">Portfolio</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/">Resources</a></li>
+                    <li><a href="/">Testimonials</a></li>
+                    <li><a href="/">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="/">Privacy Policy</a></li>
+                    <li><a href="/">Terms of Service</a></li>
+                    <li><a href="/">FAQ</a></li>
+                    <li><a href="/">Support</a></li>
+                    <li><a href="/">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            &copy; 2024 Mudit. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
+```
+
